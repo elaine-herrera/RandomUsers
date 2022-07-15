@@ -21,6 +21,13 @@
 		862CEBB992BBBF96AC3BE7A6 /* Pods_RandomUsersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02F820700D57A38ACCBF993 /* Pods_RandomUsersTests.framework */; };
 		D4DA2EB8500A11DB862CF173 /* Pods_RandomUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B45E0E07E060DF7B733F10 /* Pods_RandomUsers.framework */; };
 		E2A97C08C1C4BAAEDF5D1FB1 /* Pods_RandomUsers_RandomUsersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AB434B8423E43DA3171CCF /* Pods_RandomUsers_RandomUsersUITests.framework */; };
+		F3503E57283FD0750046E3BA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503E56283FD0750046E3BA /* UserDetailsViewController.swift */; };
+		F3503E5A283FD17D0046E3BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503E59283FD17D0046E3BA /* User.swift */; };
+		F375275D2880AC6100598B2C /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375275C2880AC6100598B2C /* UsersViewModel.swift */; };
+		F375275F2880AE3500598B2C /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375275E2880AE3500598B2C /* ClientError.swift */; };
+		F3CB2FE128819D530047A66D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB2FE028819D530047A66D /* CustomTableViewCell.swift */; };
+		F3CB2FE92881C80C0047A66D /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB2FE82881C80C0047A66D /* UserAnnotation.swift */; };
+		F3D23D82287F5F8D00B16BBA /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D23D81287F5F8D00B16BBA /* UsersResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,13 @@
 		913A443FF738D2A2C7E10CD3 /* Pods-RandomUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsers.debug.xcconfig"; path = "Target Support Files/Pods-RandomUsers/Pods-RandomUsers.debug.xcconfig"; sourceTree = "<group>"; };
 		B02F820700D57A38ACCBF993 /* Pods_RandomUsersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUsersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DC5AA6D387113E6B1464E9 /* Pods-RandomUsers-RandomUsersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsers-RandomUsersUITests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3503E56283FD0750046E3BA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		F3503E59283FD17D0046E3BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F375275C2880AC6100598B2C /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		F375275E2880AE3500598B2C /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		F3CB2FE028819D530047A66D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		F3CB2FE82881C80C0047A66D /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
+		F3D23D81287F5F8D00B16BBA /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +146,8 @@
 		4BBC588026EF9124008B623D /* RandomUsers */ = {
 			isa = PBXGroup;
 			children = (
+				F375275B2880AC4800598B2C /* ViewModel */,
+				F3503E58283FD16A0046E3BA /* Entities */,
 				4BBC58DB26EF9D63008B623D /* UI */,
 				4BBC58BE26EF930C008B623D /* Provider */,
 				4BBC588126EF9124008B623D /* AppDelegate.swift */,
@@ -191,7 +207,9 @@
 		4BBC58DB26EF9D63008B623D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB2FEA2881F58E0047A66D /* TableViewCells */,
 				4BBC58DC26EF9DA9008B623D /* UserListViewController.swift */,
+				F3503E56283FD0750046E3BA /* UserDetailsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -207,6 +225,33 @@
 				3FFC8FDFC38C1FE5EDB08F19 /* Pods-RandomUsersTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3503E58283FD16A0046E3BA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F3503E59283FD17D0046E3BA /* User.swift */,
+				F3D23D81287F5F8D00B16BBA /* UsersResponse.swift */,
+				F375275E2880AE3500598B2C /* ClientError.swift */,
+				F3CB2FE82881C80C0047A66D /* UserAnnotation.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F375275B2880AC4800598B2C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F375275C2880AC6100598B2C /* UsersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3CB2FEA2881F58E0047A66D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB2FE028819D530047A66D /* CustomTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,10 +493,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BBC58DD26EF9DA9008B623D /* UserListViewController.swift in Sources */,
+				F3D23D82287F5F8D00B16BBA /* UsersResponse.swift in Sources */,
 				4BBC58C026EF9342008B623D /* UserServices.swift in Sources */,
 				4BBC58CB26EF95AF008B623D /* UserProvider.swift in Sources */,
 				4BBC58C526EF953A008B623D /* UserProviderProtocol.swift in Sources */,
+				F375275F2880AE3500598B2C /* ClientError.swift in Sources */,
+				F3CB2FE128819D530047A66D /* CustomTableViewCell.swift in Sources */,
+				F3503E5A283FD17D0046E3BA /* User.swift in Sources */,
+				F3503E57283FD0750046E3BA /* UserDetailsViewController.swift in Sources */,
+				F3CB2FE92881C80C0047A66D /* UserAnnotation.swift in Sources */,
 				4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */,
+				F375275D2880AC6100598B2C /* UsersViewModel.swift in Sources */,
 				4BBC588426EF9124008B623D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +682,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SNP3FCLNA;
 				INFOPLIST_FILE = RandomUsers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,6 +702,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SNP3FCLNA;
 				INFOPLIST_FILE = RandomUsers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

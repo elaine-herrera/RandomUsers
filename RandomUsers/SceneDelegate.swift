@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,6 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        loadFromCode(scene)
+    }
+    
+    func loadFromCode(_ scene: UIScene){
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        
+        let viewController = UserListViewController()
+        let userProvider = UserProvider(service: MoyaProvider<UserServices>())
+        let usersViewModel = UsersViewModel(provider: userProvider, delegate: viewController)
+        viewController.viewModel = usersViewModel
+        
+        window.rootViewController = viewController
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

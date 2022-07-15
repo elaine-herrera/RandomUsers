@@ -11,9 +11,9 @@ class CustomTableViewCell: UITableViewCell {
     
     static let identifier = "CustomTableViewCell"
     static let height: CGFloat = 80
-    let imageHeight: CGFloat = 48
-    let padding: CGFloat = 16
-    let spacing: CGFloat = 6
+    private let imageHeight: CGFloat = 48
+    private let padding: CGFloat = 16
+    private let spacing: CGFloat = 6
     
     var dataTask: URLSessionDataTask?
     
