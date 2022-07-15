@@ -8,14 +8,15 @@
 import Foundation
 
 struct User: Codable{
-    let gender: String?
     let name: Name?
     let location: Location?
     let email: String?
-    let cell: String?
-    let phone: String?
-    let nat: String?
     let picture: Pictures?
+    
+    func fullName() -> String?{
+        guard let title = name?.title, let first = name?.first, let last = name?.last else { return nil }
+        return "\(title) \(first) \(last)"
+    }
 }
 
 struct Name: Codable {
