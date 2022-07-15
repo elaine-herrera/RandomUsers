@@ -9,5 +9,5 @@ import Foundation
 import Moya
 
 protocol UserProviderProtocol {
-    func listOfUsers(userCount: Int)
+    func listOfUsers(userCount: Int, page: Int, completion: @escaping ((Result<[User], ClientError>) -> Void))
 }
