@@ -25,6 +25,9 @@
 		F3503E5A283FD17D0046E3BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503E59283FD17D0046E3BA /* User.swift */; };
 		F375275D2880AC6100598B2C /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375275C2880AC6100598B2C /* UsersViewModel.swift */; };
 		F375275F2880AE3500598B2C /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375275E2880AE3500598B2C /* ClientError.swift */; };
+		F39D277D288219E00040C5AC /* Casino.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D277C288219E00040C5AC /* Casino.swift */; };
+		F39D277F2882294E0040C5AC /* dataSet.json in Resources */ = {isa = PBXBuildFile; fileRef = F39D277E2882294E0040C5AC /* dataSet.json */; };
+		F39D27802882294E0040C5AC /* dataSet.json in Resources */ = {isa = PBXBuildFile; fileRef = F39D277E2882294E0040C5AC /* dataSet.json */; };
 		F3CB2FE128819D530047A66D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB2FE028819D530047A66D /* CustomTableViewCell.swift */; };
 		F3CB2FE92881C80C0047A66D /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB2FE82881C80C0047A66D /* UserAnnotation.swift */; };
 		F3D23D82287F5F8D00B16BBA /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D23D81287F5F8D00B16BBA /* UsersResponse.swift */; };
@@ -78,6 +81,8 @@
 		F3503E59283FD17D0046E3BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F375275C2880AC6100598B2C /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		F375275E2880AE3500598B2C /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		F39D277C288219E00040C5AC /* Casino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casino.swift; sourceTree = "<group>"; };
+		F39D277E2882294E0040C5AC /* dataSet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dataSet.json; sourceTree = "<group>"; };
 		F3CB2FE028819D530047A66D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F3CB2FE82881C80C0047A66D /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		F3D23D81287F5F8D00B16BBA /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
@@ -124,6 +129,7 @@
 		4BBC587526EF9124008B623D = {
 			isa = PBXGroup;
 			children = (
+				F39D277B288219BF0040C5AC /* Second Problem */,
 				4BBC588026EF9124008B623D /* RandomUsers */,
 				4BBC589726EF9125008B623D /* RandomUsersTests */,
 				4BBC58A226EF9125008B623D /* RandomUsersUITests */,
@@ -246,6 +252,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F39D277B288219BF0040C5AC /* Second Problem */ = {
+			isa = PBXGroup;
+			children = (
+				F39D277C288219E00040C5AC /* Casino.swift */,
+				F39D277E2882294E0040C5AC /* dataSet.json */,
+			);
+			path = "Second Problem";
+			sourceTree = "<group>";
+		};
 		F3CB2FEA2881F58E0047A66D /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +379,7 @@
 			files = (
 				4BBC588E26EF9125008B623D /* LaunchScreen.storyboard in Resources */,
 				4BBC588B26EF9125008B623D /* Assets.xcassets in Resources */,
+				F39D277F2882294E0040C5AC /* dataSet.json in Resources */,
 				4BBC588926EF9124008B623D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39D27802882294E0040C5AC /* dataSet.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +521,7 @@
 				F3CB2FE92881C80C0047A66D /* UserAnnotation.swift in Sources */,
 				4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */,
 				F375275D2880AC6100598B2C /* UsersViewModel.swift in Sources */,
+				F39D277D288219E00040C5AC /* Casino.swift in Sources */,
 				4BBC588426EF9124008B623D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

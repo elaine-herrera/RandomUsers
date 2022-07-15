@@ -21,6 +21,8 @@ class RandomUsersTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let casino = Casino()
+        XCTAssertEqual(casino.numberOfFullDecks(), 0, "The number of decks in example is zero")
     }
 
     func testPerformanceExample() throws {

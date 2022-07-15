@@ -1,0 +1,18 @@
+[
+    {
+        "suit": "hearts",
+        "value": 2
+    },
+    {
+        "suit": "clubs",
+        "value": 4
+    },
+    {
+        "suit": "diamonds",
+        "value": "J"
+    },
+    {
+        "suit": "spades",
+        "value": 9
+    },
+]
