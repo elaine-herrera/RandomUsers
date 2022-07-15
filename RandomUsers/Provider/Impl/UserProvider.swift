@@ -15,14 +15,25 @@ class UserProvider: UserProviderProtocol {
         self.service = service
     }
     
-    func listOfUsers(userCount: Int) {
-        service.request(.userList(userCount: userCount)) { result in
+    func listOfUsers(userCount: Int, page: Int, completion: @escaping ((Result<[User], ClientError>) -> Void) ) {
+        service.request(.userList(userCount: userCount, page: page)) { result in
             switch result{
             case .success(let response):
-                //                parse and return data
+                let data = response.data
+                let statusCode = response.statusCode
+                guard statusCode == 200 else {
+                    completion(.failure(ClientError.invalidServerResponseError))
+                    return
+                }
+                guard let decodedResponse = try? JSONDecoder().decode(UsersResponse.self, from: data) else {
+                    completion(.failure(ClientError.parseError))
+                    return
+                }
+                let users = decodedResponse.users
+                completion(.success(users))
                 break
             case .failure(let error):
-                //                handle request error
+                completion(.failure(ClientError.httpError(error: error.localizedDescription)))
                 break
             }
         }
