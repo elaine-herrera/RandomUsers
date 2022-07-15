@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum UserServices {
-    case userList(userCount: Int)
+    case userList(userCount: Int, page: Int)
 }
 
 extension UserServices: TargetType {
@@ -28,14 +28,18 @@ extension UserServices: TargetType {
     var sampleData: Data {
         switch self {
         default:
-            return "Half measures are as bad as nothing at all.".data(using: String.Encoding.utf8)!
+            guard let url = Bundle.main.url(forResource: "results", withExtension: "json"),
+                let data = try? Data(contentsOf: url) else {
+                    return Data()
+            }
+            return data
         }
     }
 
     var task: Task {
         switch self {
-        case let .userList(userCount):
-            return .requestParameters(parameters: ["results": userCount], encoding:  URLEncoding.queryString)
+        case let .userList(userCount, page):
+            return .requestParameters(parameters: ["results": userCount, "page": page, "seed": "foo", "inc": "name,email,location,picture"], encoding:  URLEncoding.queryString)
         }
     }
 
