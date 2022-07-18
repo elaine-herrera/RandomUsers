@@ -57,6 +57,7 @@ class UserDetailsViewController: UIViewController{
     
     func setUpNavBar(){
         let closeBtn = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(close))
+        closeBtn.accessibilityLabel = "Close Button"
         navigationItem.rightBarButtonItem = closeBtn
     }
     

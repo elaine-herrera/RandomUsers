@@ -18,11 +18,12 @@ class RandomUsersTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testNumberOfFullDecks() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let casino = Casino()
-        XCTAssertEqual(casino.numberOfFullDecks(), 0, "The number of decks in example is zero")
+        let casino = Casino(path: "dataSet")
+        let expected = 0
+        XCTAssertEqual(casino.numberOfFullDecks(), expected, "The number of decks in example is \(expected)")
     }
 
     func testPerformanceExample() throws {

@@ -15,8 +15,8 @@ class Casino{
     var clubs: [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     var diamonds: [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     
-    init(){
-        guard let url = Bundle.main.url(forResource: "dataSet", withExtension: "json"), let data = try? Data(contentsOf: url) else { return }
+    init(path: String){
+        guard let url = Bundle.main.url(forResource: path, withExtension: "json"), let data = try? Data(contentsOf: url) else { return }
         guard let dataSet = try? JSONDecoder().decode([Card].self, from: data) else { return }
         for item in dataSet {
             var innerValue = ""
@@ -55,26 +55,6 @@ class Casino{
         switch value{
         case "A":
             return 0
-        case "1":
-            return 1
-        case "2":
-            return 2
-        case "3":
-            return 3
-        case "4":
-            return 4
-        case "5":
-            return 5
-        case "6":
-            return 6
-        case "7":
-            return 7
-        case "8":
-            return 8
-        case "9":
-            return 9
-        case "10":
-            return 10
         case "J":
             return 11
         case "Q":
@@ -82,7 +62,7 @@ class Casino{
         case "K":
             return 13
         default:
-            return -1
+            return Int(value) ?? -1
         }
     }
     

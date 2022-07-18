@@ -30,6 +30,7 @@ class CustomTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "Name"
         return label
     }()
     
@@ -62,8 +63,10 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     func setUpView(){
-        self.contentView.addSubview(profileImageView)
-        self.contentView.addSubview(stackView)
+        
+        accessibilityIdentifier = "User Cell"
+        contentView.addSubview(profileImageView)
+        contentView.addSubview(stackView)
         
         let imageViewConstrains = [
             profileImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
@@ -75,7 +78,7 @@ class CustomTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate(imageViewConstrains)
         
         let stackViewConstraints = [
-            stackView.leadingAnchor.constraint(equalTo: self.profileImageView.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
